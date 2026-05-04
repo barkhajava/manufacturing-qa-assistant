@@ -4,6 +4,12 @@ A LangChain agent that answers plain-English questions about manufacturing quali
 Ask things like *"Which line had the highest defect rate last week?"* and get a direct,
 data-grounded answer.
 
+## Screenshots
+
+| Home | Thinking | Response |
+|------|----------|----------|
+| ![Home screen with suggested questions](docs/screenshot-home.png) | ![Agent thinking state](docs/screenshot-thinking.png) | ![Data-grounded answer](docs/screenshot-response.png) |
+
 ## Why I built this
 
 I've spent 5+ years building production ML systems — but agent frameworks like LangChain
