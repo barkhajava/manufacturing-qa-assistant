@@ -41,37 +41,19 @@ scripts/
 data/            – SQLite file lives here (gitignored)
 ```
 
-## Setup
-
-### 1. Install dependencies
+## Quick start
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate      # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-### 2. Configure environment
-
-```bash
+# 1. Add your Anthropic API key
 cp .env.example .env
-# Open .env and paste your Anthropic API key
+# open .env and set ANTHROPIC_API_KEY
+
+# 2. Run everything in one command
+./start.sh
 ```
 
-### 3. Seed the database
-
-```bash
-python scripts/seed_data.py
-```
-
-This creates `data/manufacturing.db` with 90 days × 4 lines of mock data.
-Realistic patterns are baked in (Line B rising trend, Line C historical spike).
-
-### 4. Run the server
-
-```bash
-uvicorn app.main:app --reload
-```
+`start.sh` creates the virtualenv, installs dependencies, seeds the database
+(90 days × 4 lines of mock data — only on first run), and starts the server.
 
 Open [http://localhost:8000](http://localhost:8000) in your browser.
 
